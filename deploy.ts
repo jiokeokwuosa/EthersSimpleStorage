@@ -1,6 +1,7 @@
-const ethers = require('ethers')
-const fs = require('fs-extra')
-require("dotenv").config()
+import {ethers} from 'ethers'
+import * as fs from 'fs-extra'
+import 'dotenv/config'
+
 /*
 we will use solcjs to complile the contract.
 before i deploy i need to compile first using yarn compile.
@@ -9,7 +10,7 @@ we will use ethers to deploy the contract
 */
 const main = async() => {
     const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL)
-    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider) // this takes wallet private key and blockchain provider
+    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY!, provider) // this takes wallet private key and blockchain provider
     
     const abi = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.abi","utf8")
     const binary = fs.readFileSync("./SimpleStorage_sol_SimpleStorage.bin","utf8")
