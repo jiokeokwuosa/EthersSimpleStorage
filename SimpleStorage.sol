@@ -5,6 +5,7 @@ pragma solidity ^0.8.7;
  Solidity is an object oriented, high level language for implementing smart contracts
  Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
  A blockchain is a globally shared, transactional database
+ 
 */
 
 contract SimpleStorage{
